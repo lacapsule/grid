@@ -1,0 +1,97 @@
+@import url('reset.css');
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: White;
+    background-image: url('media/img/apple.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+}
+header:after {
+    content: " Page de démo du grid ";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+main {
+    display: block;
+    position: relative;
+    left: 0;
+    top: -10vh;
+    width: 100vw;
+    height: 80vh;
+    background-color: beige;
+    z-index: 0;
+}
+menu {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: repeat(20%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+a {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 6em;
+    min-height: 12em;
+    z-index: 0;
+}
+a:nth-child(even) {
+    background-color: azure;
+}
+a:nth-child(odd) {
+    background-color: antiquewhite;
+}
+img[alt="icone"] {
+    width: 8em;
+    height: auto;
+    z-index: 0;
+}
+footer {
+    display: flex;
+    position: fixed;
+    top: 90vh;
+    bottom: 0;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: White;
+    background-image: url('media/img/apple.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+}
+@media screen and (max-width: 950px) {
+    menu {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+@media screen and (max-width: 640px) {
+    menu {
+        grid-template-columns: 100%;
+    }
+}
